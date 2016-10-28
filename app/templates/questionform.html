@@ -1,0 +1,31 @@
+{%extends "new.html"%}
+{%block content%}
+<form action="" method="post" name = "question">
+  <div class="form-group">
+    {%for picture in pictures%}
+  <div id = "center"><img src ={{picture['href']}} class="img-rounded"></div>
+    {%endfor%}
+  <div class="container-fluid">
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3">
+  <span class="input-group-addon" id="photo-question-apple"><h3>Где яблоко?</h3></span>
+
+    <!--<h2>{{form.answer_apple(size = 67)}}</h2>-->
+      <input type="text" class="form-control where-apple" placeholder="Ваше описание" aria-label="photo-description1">
+</div>
+</div>
+   <div class="row">
+   <div class="col-md-6 col-md-offset-3">
+
+  <div class="form-group">
+  <span class="input-group-addon" id="photo-question-orange"><h3>Где апельсин?</h3></span>
+    <!--<h2>{{form.answer_orange(size = 67)}}</h2>-->
+  <input type="text" class="form-control where-orange" placeholder="Ваше описание" aria-label="photo-description2">
+  </div>
+    </div>
+    </div>
+  <button type="submit" class="btn btn-lg pushit" value="js here">Ответить</button>
+    </div>
+    </div>
+</form>
+{%endblock%}

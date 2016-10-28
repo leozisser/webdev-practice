@@ -1,0 +1,57 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    {% if title %}
+    <title>{{title}} - my webdev page</title>
+    {% else %}
+    <title>i forgot to title the page</title>
+    {% endif %}
+
+    <!-- Bootstrap -->
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  
+<style>
+h1, h2, h3, h4, h5, h6, p {
+  text-align:center;
+  }
+body{
+  background: #f00 url('https://i.ytimg.com/vi/HK80X96-27A/maxresdefault.jpg') no-repeat center center fixed; 
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
+}
+form{
+  text-align: center;
+}
+.footer{
+  text-align: center;
+    color: #AABB33;
+}
+</style>
+  <body>
+      <div>My webdev project: <a href="/index">Home Page</a> <a href="/questionform">Quiz</a></div>
+    <hr>
+    {% block content %}{% endblock %}
+
+  <div class="footer">
+        {% block footer %}
+        &copy; Copyright 2016 by <a href="http:/vk.com/mon_dieu/">Zisser Technologies Ltd.</a>.
+        {% endblock %}
+    </div>
+  </body>
+
+</html>
